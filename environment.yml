@@ -1,0 +1,17 @@
+name: imgtools
+channels:
+  - conda-forge
+dependencies:
+  - python=3.10
+  - pip
+  - numpy>=1.24
+  - opencv>=4.9
+  - scikit-image>=0.22
+  - pillow>=10
+  - matplotlib>=3.8
+  - tqdm
+  - ipykernel
+  - pip:
+      # 可选：若你不想用 conda 的 opencv，可以改装 pip 的
+      # - opencv-python>=4.9
+      # - opencv-contrib-python>=4.9

@@ -1,0 +1,420 @@
+{
+  "success": true,
+  "camera_matrix": [
+    [
+      4432.6962613567375,
+      0.0,
+      1406.3493098569886
+    ],
+    [
+      0.0,
+      4433.223414377945,
+      1393.9202280063307
+    ],
+    [
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "distortion_coefficients": [
+    -0.16885222253874715,
+    0.15676449677258852,
+    6.287911544273951e-05,
+    -0.0003239381935057697,
+    -0.0341547072843724
+  ],
+  "image_size": [
+    2848,
+    2848
+  ],
+  "num_images": 36,
+  "reprojection_error": 0.10306545857932467,
+  "focal_length_x": 4432.6962613567375,
+  "focal_length_y": 4433.223414377945,
+  "principal_point_x": 1406.3493098569886,
+  "principal_point_y": 1393.9202280063307,
+  "board_spec": {
+    "small_diameter_mm": 5.0,
+    "center_spacing_mm": 25.0,
+    "small_radius_mm": 2.5
+  },
+  "successful_images": [
+    "1",
+    "10",
+    "11",
+    "12",
+    "13",
+    "14",
+    "15",
+    "16",
+    "17",
+    "18",
+    "19",
+    "2",
+    "20",
+    "21",
+    "22",
+    "23",
+    "24",
+    "25",
+    "26",
+    "27",
+    "28",
+    "29",
+    "3",
+    "30",
+    "31",
+    "32",
+    "33",
+    "34",
+    "35",
+    "36",
+    "37",
+    "38",
+    "39",
+    "4",
+    "40",
+    "41",
+    "42",
+    "43",
+    "44",
+    "45",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9"
+  ],
+  "quality_reports": [
+    [
+      "1",
+      {
+        "valid": true,
+        "reason": "\u68c0\u6d4b\u8d28\u91cf\u826f\u597d"
+      }
+    ],
+    [
+      "10",
+      {
+        "valid": true,
+        "reason": "\u68c0\u6d4b\u8d28\u91cf\u826f\u597d"
+      }
+    ],
+    [
+      "11",
+      {
+        "valid": true,
+        "reason": "\u68c0\u6d4b\u8d28\u91cf\u826f\u597d"
+      }
+    ],
+    [
+      "12",
+      {
+        "valid": true,
+        "reason": "\u68c0\u6d4b\u8d28\u91cf\u826f\u597d"
+      }
+    ],
+    [
+      "13",
+      {
+        "valid": true,
+        "reason": "\u68c0\u6d4b\u8d28\u91cf\u826f\u597d"
+      }
+    ],
+    [
+      "14",
+      {
+        "valid": true,
+        "reason": "\u68c0\u6d4b\u8d28\u91cf\u826f\u597d"
+      }
+    ],
+    [
+      "15",
+      {
+        "valid": true,
+        "reason": "\u68c0\u6d4b\u8d28\u91cf\u826f\u597d"
+      }
+    ],
+    [
+      "16",
+      {
+        "valid": true,
+        "reason": "\u68c0\u6d4b\u8d28\u91cf\u826f\u597d"
+      }
+    ],
+    [
+      "17",
+      {
+        "valid": true,
+        "reason": "\u68c0\u6d4b\u8d28\u91cf\u826f\u597d"
+      }
+    ],
+    [
+      "18",
+      {
+        "valid": true,
+        "reason": "\u68c0\u6d4b\u8d28\u91cf\u826f\u597d"
+      }
+    ],
+    [
+      "19",
+      {
+        "valid": true,
+        "reason": "\u68c0\u6d4b\u8d28\u91cf\u826f\u597d"
+      }
+    ],
+    [
+      "2",
+      {
+        "valid": true,
+        "reason": "\u68c0\u6d4b\u8d28\u91cf\u826f\u597d"
+      }
+    ],
+    [
+      "20",
+      {
+        "valid": true,
+        "reason": "\u68c0\u6d4b\u8d28\u91cf\u826f\u597d"
+      }
+    ],
+    [
+      "21",
+      {
+        "valid": true,
+        "reason": "\u68c0\u6d4b\u8d28\u91cf\u826f\u597d"
+      }
+    ],
+    [
+      "22",
+      {
+        "valid": true,
+        "reason": "\u68c0\u6d4b\u8d28\u91cf\u826f\u597d"
+      }
+    ],
+    [
+      "23",
+      {
+        "valid": true,
+        "reason": "\u68c0\u6d4b\u8d28\u91cf\u826f\u597d"
+      }
+    ],
+    [
+      "24",
+      {
+        "valid": true,
+        "reason": "\u68c0\u6d4b\u8d28\u91cf\u826f\u597d"
+      }
+    ],
+    [
+      "25",
+      {
+        "valid": true,
+        "reason": "\u68c0\u6d4b\u8d28\u91cf\u826f\u597d"
+      }
+    ],
+    [
+      "26",
+      {
+        "valid": true,
+        "reason": "\u68c0\u6d4b\u8d28\u91cf\u826f\u597d"
+      }
+    ],
+    [
+      "27",
+      {
+        "valid": true,
+        "reason": "\u68c0\u6d4b\u8d28\u91cf\u826f\u597d"
+      }
+    ],
+    [
+      "28",
+      {
+        "valid": true,
+        "reason": "\u68c0\u6d4b\u8d28\u91cf\u826f\u597d"
+      }
+    ],
+    [
+      "29",
+      {
+        "valid": true,
+        "reason": "\u68c0\u6d4b\u8d28\u91cf\u826f\u597d"
+      }
+    ],
+    [
+      "3",
+      {
+        "valid": true,
+        "reason": "\u68c0\u6d4b\u8d28\u91cf\u826f\u597d"
+      }
+    ],
+    [
+      "30",
+      {
+        "valid": true,
+        "reason": "\u68c0\u6d4b\u8d28\u91cf\u826f\u597d"
+      }
+    ],
+    [
+      "31",
+      {
+        "valid": true,
+        "reason": "\u68c0\u6d4b\u8d28\u91cf\u826f\u597d"
+      }
+    ],
+    [
+      "32",
+      {
+        "valid": true,
+        "reason": "\u68c0\u6d4b\u8d28\u91cf\u826f\u597d"
+      }
+    ],
+    [
+      "33",
+      {
+        "valid": true,
+        "reason": "\u68c0\u6d4b\u8d28\u91cf\u826f\u597d"
+      }
+    ],
+    [
+      "34",
+      {
+        "valid": true,
+        "reason": "\u68c0\u6d4b\u8d28\u91cf\u826f\u597d"
+      }
+    ],
+    [
+      "35",
+      {
+        "valid": true,
+        "reason": "\u68c0\u6d4b\u8d28\u91cf\u826f\u597d"
+      }
+    ],
+    [
+      "36",
+      {
+        "valid": true,
+        "reason": "\u68c0\u6d4b\u8d28\u91cf\u826f\u597d"
+      }
+    ],
+    [
+      "37",
+      {
+        "valid": true,
+        "reason": "\u68c0\u6d4b\u8d28\u91cf\u826f\u597d"
+      }
+    ],
+    [
+      "38",
+      {
+        "valid": true,
+        "reason": "\u68c0\u6d4b\u8d28\u91cf\u826f\u597d"
+      }
+    ],
+    [
+      "39",
+      {
+        "valid": true,
+        "reason": "\u68c0\u6d4b\u8d28\u91cf\u826f\u597d"
+      }
+    ],
+    [
+      "4",
+      {
+        "valid": true,
+        "reason": "\u68c0\u6d4b\u8d28\u91cf\u826f\u597d"
+      }
+    ],
+    [
+      "40",
+      {
+        "valid": true,
+        "reason": "\u68c0\u6d4b\u8d28\u91cf\u826f\u597d"
+      }
+    ],
+    [
+      "41",
+      {
+        "valid": true,
+        "reason": "\u68c0\u6d4b\u8d28\u91cf\u826f\u597d"
+      }
+    ],
+    [
+      "42",
+      {
+        "valid": true,
+        "reason": "\u68c0\u6d4b\u8d28\u91cf\u826f\u597d"
+      }
+    ],
+    [
+      "43",
+      {
+        "valid": true,
+        "reason": "\u68c0\u6d4b\u8d28\u91cf\u826f\u597d"
+      }
+    ],
+    [
+      "44",
+      {
+        "valid": true,
+        "reason": "\u68c0\u6d4b\u8d28\u91cf\u826f\u597d"
+      }
+    ],
+    [
+      "45",
+      {
+        "valid": true,
+        "reason": "\u68c0\u6d4b\u8d28\u91cf\u826f\u597d"
+      }
+    ],
+    [
+      "5",
+      {
+        "valid": true,
+        "reason": "\u68c0\u6d4b\u8d28\u91cf\u826f\u597d"
+      }
+    ],
+    [
+      "6",
+      {
+        "valid": true,
+        "reason": "\u68c0\u6d4b\u8d28\u91cf\u826f\u597d"
+      }
+    ],
+    [
+      "7",
+      {
+        "valid": true,
+        "reason": "\u68c0\u6d4b\u8d28\u91cf\u826f\u597d"
+      }
+    ],
+    [
+      "8",
+      {
+        "valid": true,
+        "reason": "\u68c0\u6d4b\u8d28\u91cf\u826f\u597d"
+      }
+    ],
+    [
+      "9",
+      {
+        "valid": true,
+        "reason": "\u68c0\u6d4b\u8d28\u91cf\u826f\u597d"
+      }
+    ]
+  ],
+  "quality_evaluation": {
+    "overall_quality": "excellent",
+    "reprojection_error_quality": "excellent",
+    "aspect_ratio_quality": "good",
+    "principal_point_quality": "good",
+    "distortion_quality": "medium",
+    "recommended_applications": [
+      "high_precision_measurement",
+      "industrial_inspection",
+      "robot_vision",
+      "ar_vr_applications"
+    ],
+    "improvement_suggestions": []
+  }
+}

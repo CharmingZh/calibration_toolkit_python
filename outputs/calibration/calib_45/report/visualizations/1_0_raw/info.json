@@ -1,0 +1,9 @@
+{
+  "success": true,
+  "stage": "done",
+  "fail_reason": null,
+  "detected_small": 41,
+  "detected_big": 4,
+  "expected_small": 41,
+  "expected_big": 4
+}
