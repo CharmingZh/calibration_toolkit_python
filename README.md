@@ -311,6 +311,7 @@ python tools/evaluation/evaluate_board.py --images /path/to/calib_images --outpu
 ## 备注
 
 - 所有脚本在执行时会自动定位项目根目录，因此可以直接从仓库根目录运行。
+- 建议使用提供的 `environment.yml` 创建 Conda 环境，以获得完整的依赖。
 
 ## ☕ Buy Me a Coffee
 
@@ -320,4 +321,4 @@ Your support keeps this project going! ❤️
 <div style="text-align: center;">
 <img src="https://github.com/CharmingZh/IsItBusy/blob/master/docs/pic/img.png" alt="微信收款码" style="width:50%;" />
 </div>
-- 建议使用提供的 `environment.yml` 创建 Conda 环境，以获得完整的依赖。
+
