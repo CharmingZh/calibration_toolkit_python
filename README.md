@@ -7,6 +7,7 @@
 ```
 Calib/
 ├─ calib/                      # 核心检测与可视化模块（保持原有包结构）
+├─ ref/                        # 标定板参考资料、截图与测量数据
 ├─ docs/
 │  └─ (空)                      # 预留文档目录
 ├─ tests/
@@ -90,23 +91,29 @@ python tools/calibration/analyze_calibration.py --result /path/to/calib_results/
 python tools/evaluation/evaluate_board.py --images /path/to/calib_images --calibration /path/to/calib_results/camera_calibration_improved.json --output /path/to/report_dir --save_viz
 ```
 
-## 外部数据目录验证
+## 数据集获取与验证
 
-- 示例数据集：`/path/to/datasets/calib_45`
+- 示例数据集（`calib_45`）已开放下载：<https://drive.google.com/drive/folders/1zHoPr-e2-I7DZpHDhPk-V5t5pPHO4Lic?usp=share_link>
 - 运行环境：macOS + Conda (Python 3.10，OpenCV 按 `environment.yml` 安装)
 
-执行以下命令可以直接在任意目录下的标定图像上完成标定，并在项目内输出结果（已于 2025-10-05 验证）：
+如需在本地快速体验，可以先把压缩包下载到数据根目录并解压，然后运行以下流程完成标定并生成可视化结果（已于 2025-10-05 验证）：
 
 ```bash
 cd /path/to/Calib
 export PYTHONPATH=$(pwd)
 python tools/calibration/calibrate_intrinsics.py \
-  --input /path/to/datasets/calib_45 \
-  --output outputs/calibration/calib_45 \
-  --save_viz
+    --input /path/to/datasets/calib_45 \
+    --output outputs/calibration/calib_45 \
+    --save_viz
 ```
 
 运行结束后，标定参数写入 `outputs/calibration/calib_45/camera_calibration_improved.json`，同时生成对应的可视化 PNG 文件，可确认流程在外部数据目录下完全可用。
+
+## ref 目录资源说明
+
+- `ref/nolabel.png`（文档内记作 `board_reference.png`）与 `ref/size.jpg`（文档内记作 `board_with_scale.jpg`）均拍摄自 Creality 的 *High-Precision Calibration Board for Otter Serise / Ferret Serise*（产品链接：<https://store.creality.com/products/high-precision-calibration-board-for-otter-serise-ferret-serise>）。官方并未提供圆网格的标准坐标文件，因此仓库内的圆心位置数据是通过图像处理自动提取并人工校验得到。
+- 标定板上四个大圆仅用于粗定位与姿态初始化，最终的几何求解依赖 41 个小圆的亚像素位置；相关权重配置可在 `calib/core/board_spec.py` 与 `calib/utils/board.py` 中查阅。
+- 精确测量信息集中在 `ref/calib_board/` 目录，包含 `board_points.csv` / `board_points.json` / `board_points.svg` / `board_points.png` 等文件，分别提供数值版、可视化版与分享给第三方的辅助材料。如需在报告中引用，可将其视作官方资料的补充。
 
 ## Benchmark（calib_45 数据集）
 
@@ -152,6 +159,22 @@ for name, pattern in patterns.items():
 ```
 
 这样能够直观呈现检测质量、畸变矫正效果与误差结构。
+
+### 示例可视化（calib_45）
+
+| 原始采集 | 板面展开 | 圆心编号 |
+| --- | --- | --- |
+| <img src="outputs/calibration/calib_45/1_0_raw.png" alt="Raw input" width="240" /> | <img src="outputs/calibration/calib_45/1_3_rect_refined.png" alt="Rectified board" width="240" /> | <img src="outputs/calibration/calib_45/1_6_raw_numbered.png" alt="Numbered circles" width="240" /> |
+
+> 上述截图直接来自 `outputs/calibration/calib_45/`，如需在其他数据集上展示，可参考同名模式（`*_raw.png`、`*_rect_refined.png`、`*_raw_numbered.png`）挑选对应阶段的可视化结果。
+
+### Benchmark 视觉摘要
+
+| 检测回顾 | 重投影误差热力图 | 位姿误差分解 |
+| --- | --- | --- |
+| <img src="outputs/calibration/calib_45/report/figures/evaluation_overview.png" alt="Evaluation overview" width="280" /> | <img src="outputs/calibration/calib_45/report/figures/reprojection_error_heatmap.png" alt="Reprojection error heatmap" width="280" /> | <img src="outputs/calibration/calib_45/report/figures/pose_error_breakdown.png" alt="Pose error breakdown" width="280" /> |
+
+> `outputs/calibration/calib_45/report/` 中还包含完整的评估图表（如 `per_image_reprojection.png`、`translation_axis_offsets.png`），以及 `visualizations/` 目录下的逐图可视化。需要在 Benchmark 章节展示更多结果时，可直接引用这些文件或嵌入 Markdown 表格。
 
 > 评估脚本会额外生成 `outputs/calibration/calib_45/report/axis_error_log.json`，记录每张图片的重投影残差拟合位移（单位 mm）以及对应的轴向相对误差。该日志与表格中数值一致，可用于追溯原始物理误差。  
 > 轴向位移的计算方式：将每张图像的重投影残差投影回三维，利用像素误差对平移向量的一阶雅可比近似解出最小二乘位移，从而得到以毫米为单位的物理校准偏差。 
