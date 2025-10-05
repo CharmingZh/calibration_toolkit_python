@@ -130,7 +130,7 @@ python tools/calibration/calibrate_intrinsics.py \
 | 轴向物理误差均值 (mm) | X=0.000007，Y=0.000009，Z=0.000079 |
 | 轴向物理误差相对 (%) | X=0.000010，Y=0.000014，Z=0.000018 |
 
-### 推荐展示图片
+### 结果可视化
 
 启用 `--save_viz` 后，输出目录会生成以下关键图像，可使用示例代码批量筛选：
 
@@ -221,20 +221,6 @@ for name, pattern in patterns.items():
 3. 解读输出：`report_dir` 内包含召回率、重投影统计、位姿误差及对应可视化；如需更细节，可再运行 `tools/evaluation/generate_visuals.py`。
 4. 文本报告（可选）：执行 `python tools/calibration/analyze_calibration.py --result <json>` 获取终端友好的评价摘要。
 
-## 数据集发布建议
-
-1. **打包**：在数据集根目录执行 `tar -czf calib_45.tar.gz calib_45/`，保持目录中直接存放原始图像。
-2. **校验**：运行 `shasum -a 256 calib_45.tar.gz`（或 `sha256sum`）并记录结果，发布在 README 与分享页面。
-3. **上传**：将压缩包上传至 Google Drive，设置“拥有链接的用户可查看”，并获取共享链接（同时可以生成直接下载的 `uc?export=download&id=` 形式）。
-4. **下载指引**：在仓库 README 中提供推荐命令，例如：
-
-   ```bash
-   pip install gdown
-   gdown "https://drive.google.com/uc?export=download&id=<FILE_ID>" -O calib_45.tar.gz
-   tar -xzf calib_45.tar.gz -C /path/to/datasets
-   ```
-
-5. **附加说明**：在数据发布页补充拍摄设备、板规格、曝光设置等元信息，帮助他人理解数据来源；若有多个序列，建议以 `calib_<session>/` 命名并维护版本号。
 
 ## 最小调用示例
 
