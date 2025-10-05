@@ -1,6 +1,11 @@
 # Calib
 
 相机标定与圆形标定板检测工具集。核心算法都封装在 `calib` 包内，其余脚本根据用途划分到 `tools/` 与 `tests/` 目录，便于在命令行环境中完成标定、评估与数据增强等任务。
+<img width="4032" height="3024" alt="图像" src="https://github.com/user-attachments/assets/c8521c9a-a6e6-4ee9-accc-07ae2ff3ed88" />
+
+<img width="1200" height="1200" alt="reprojection_error_scatter" src="https://github.com/user-attachments/assets/d2a54075-85e1-464a-979f-e3721ca841a6" />
+
+
 
 ## 目录结构
 
